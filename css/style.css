@@ -3550,3 +3550,13 @@ html, body{max-width:100%;overflow-x:hidden}
 @media(max-width:768px){
     .idea-vending{min-height:336px;margin:18px auto 28px;padding:12px 65px 14px 12px;border-width:5px;border-radius:22px;box-shadow:7px 8px 0 #3e0b0b}.idea-vending:before{right:9px;top:52px;bottom:14px;width:43px;border-width:2px;border-radius:9px}.idea-vending:after{bottom:-22px;font-size:.43rem}.vending-top{height:23px;font-size:.53rem;padding-bottom:6px}.vending-window{min-height:63px;border-width:3px}.vending-window:before{top:5px;left:8px;font-size:.32rem}.vending-window p{font-size:.96rem;margin-top:8px}.vending-controls{gap:6px;margin:9px 0}.vending-controls button{min-height:72px;padding:32px 0 7px;border-width:2px;font-size:.68rem}.vending-controls button:before{top:9px;width:24px;height:24px;font-size:.34rem}.vending-coin{right:10px;top:67px;width:34px;font-size:.33rem;gap:4px}.vending-coin i{width:20px;height:4px}.vending-coin b{width:18px;height:18px}.vending-tray i{height:19px;border-width:3px}
 }
+
+/* About section desktop layout: keep the spread centered and match the reference composition. */
+@media(min-width:1025px){
+    .section.four .box2{width:min(1350px,calc(100% - 96px));padding:0;align-items:flex-start;gap:6%;}
+    .four .left2{width:40%;margin:0;}
+    .four .meme{width:min(100%,470px);}
+    .four .right2{width:54%;margin-top:0;}
+    .four .info h2{font-size:clamp(30px,2.1vw,34px);line-height:1.2;}
+    .four .edu-row,.four .skill li{font-size:clamp(22px,1.7vw,26px);line-height:1.45;}
+}

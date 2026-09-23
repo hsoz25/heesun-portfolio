@@ -1,5 +1,9 @@
 $(function () {
 
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    const initialHash = window.location.hash;
+    if (!initialHash) window.scrollTo(0, 0);
+
     $('#pf').fullpage({
         anchors: [
             'page1',
@@ -7,20 +11,25 @@ $(function () {
             'page3',
             'page4',
             'page5',
-            'cardnews',
             'page6',
             'page7',
             'page8',
+            'page9',
             'footer'
         ],
 
-        responsiveWidth: 800,
-        normalScrollElements: ".xa-phone-screen",
+        responsiveWidth: 1025,
+        normalScrollElements: ".xa-phone-screen, .screen, .poster-popup, .contact-popup",
+
+        afterRender: function () {
+            if (!initialHash) $.fn.fullpage.moveTo('page1');
+        },
 
         afterResponsive: function (isResponsive) {
 
             if (isResponsive) {
                 $(".second").hide();
+                $("header").addClass("on");
             } else {
                 $(".second").show();
             }
@@ -35,7 +44,7 @@ $(function () {
 
             if (
                 index >= 3 &&
-                anchorLink !== 'page8' &&
+                anchorLink !== 'page9' &&
                 anchorLink !== 'footer'
             ) {
                 $('header').addClass('on');
@@ -85,7 +94,7 @@ $(function () {
                 const img = card.find("img");
 
                 const newSrc = currentGroup
-                    ? $(".group-2 img").eq(i).attr("src")
+                    ? ($(".group-2 img").eq(i).attr("src") || originImgs[i])
                     : originImgs[i];
 
                 card.css({
@@ -148,6 +157,11 @@ $(function () {
         // youtube.com/embed/VIDEO_ID
         if (url.includes("/embed/")) {
             return url.split("/embed/")[1].split("?")[0];
+        }
+
+        // youtube.com/shorts/VIDEO_ID
+        if (url.includes("/shorts/")) {
+            return url.split("/shorts/")[1].split("?")[0];
         }
 
         // 이미 video ID만 들어온 경우
@@ -237,7 +251,7 @@ $(function () {
 
             event.stopPropagation();
 
-            $.fn.fullpage.setAllowScrolling(false);
+            if (window.innerWidth > 1024) $.fn.fullpage.setAllowScrolling(false);
 
         })
         .on("wheel touchmove", function (event) {
