@@ -33,17 +33,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="css/fullpage.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260924-2">
     <link rel="stylesheet" href="css/profile-editorial.css">
     <link rel="stylesheet" href="css/xband-archive.css">
     <link rel="stylesheet" href="css/cardnews-archive.css">
+    <link rel="stylesheet" href="css/responsive-refinement.css?v=20260924-12">
     <script src="js/cardnews-archive.js" defer></script>
     <script src="js/xband-archive.js" defer></script>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="js/fullpage.js"></script>
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=20260924-2" defer></script>
 </head>
 
 <body>
@@ -63,13 +64,13 @@
                 <a href="#">Work</a>
 
                 <ul class="submenu">
-                    <li data-meunanchor="page5"><a href="#page5">Poster Archive</a></li>
-                    <li data-meunanchor="cardnews"><a href="#cardnews">Card News Archive</a></li>
-                    <li data-meunanchor="page6"><a href="#page6">Detail Page Archive</a></li>
-                    <li data-meunanchor="page7"><a href="#page7">Video Archive</a></li>
+                    <li data-meunanchor="page5"><a href="#page5">Card News Archive</a></li>
+                    <li data-meunanchor="page6"><a href="#page6">Album Design Archive</a></li>
+                    <li data-meunanchor="page7"><a href="#page7">Detail Page Archive</a></li>
+                    <li data-meunanchor="page8"><a href="#page8">Video Archive</a></li>
                 </ul>
             </li>
-            <li data-meunanchor="page8"><a href="#page8">Contact</a></li>
+            <li data-meunanchor="page9"><a href="#page9">Contact</a></li>
         </ul>
     </header>
 
@@ -179,7 +180,7 @@
                 <div class="hs-spread">
                     <figure class="hs-portrait"><img src="images/profile-heesun.png" alt="한희선 프로필 사진"><figcaption>MEET THE PERSON BEHIND THE IDEAS <span>↗</span></figcaption></figure>
                     <div class="hs-feature">
-                        <div class="hs-feature-heading"><p>될 때까지 하는</p><h2>아이디어<br>자판기</h2></div>
+                        <div class="hs-feature-heading"><p>될 때까지 하는</p><h2>아이디어 <br>자판기</h2></div>
                         <div class="hs-selection">
                             <p class="hs-pick">PICK ONE <span>나를 표현하는 네 가지 모습 ↓</span></p>
                             <div class="hs-traits">
@@ -202,7 +203,7 @@
                 <div class="left2">
                     <img src="images/이모지.png" alt="미모티콘" class="meme">
                     <p class="p-name">한희선</p>
-                    <p class="p-age">25세 (2002년생)</p>
+                    <p class="p-age">2002년생</p>
                 </div>
 
                 <div class="right2">
@@ -245,44 +246,21 @@
         </section>
 
         <!-- 5번째 섹션 -->
-        <section class="section five">
-
-            <div class="wall">
-                <p class="pj">Project Archive</p>
-            </div>
-
-            <div class="poster-container">
-
-                <div class="poster-group group-1">
-                    <div class="poster-item"><img src="images/poster1.png" alt="포스터 1"></div>
-                    <div class="poster-item"><img src="images/poster2.png" alt="포스터 2"></div>
-                    <div class="poster-item"><img src="images/poster3.png" alt="포스터 3"></div>
-                    <div class="poster-item"><img src="images/poster4.png" alt="포스터 4"></div>
-                </div>
-
-                <!-- JS에서 이미지 경로만 가져오는 용도 -->
-                <div class="poster-group group-2">
-                    <div class="poster-item"><img src="images/poster5.jpg" alt="포스터 5"></div>
-                    <div class="poster-item"><img src="images/poster6.png" alt="포스터 6"></div>
-                    <div class="poster-item"><img src="images/poster7.png" alt="포스터 7"></div>
-                    <div class="poster-item"><img src="images/poster8.png" alt="포스터 8"></div>
-                </div>
-
-                <button id="viewMoreBtn" class="view-more-btn">
-                    View more+
-                </button>
-
-            </div>
-
-
+        <section class="section cn-archive">
+            <div class="cn-archive-inner"><div class="cn-archive-heading"><span>PROJECT ARCHIVE / CARD NEWS</span><span>HAN HEESUN</span></div><div class="cn-archive-layout"><a class="cn-preview" href="cardnews.html"><img id="cnPreview" src="images/cardnews/card-1.png" alt="청춘st 노래 모음zip 표지"><span>전체 카드뉴스 보기 ↗</span></a><div class="cn-archive-copy"><p>EDITORIAL DESIGN</p><h2>YOUTH<br>ON REPEAT</h2><h3>청춘st 노래 모음zip</h3><p class="cn-summary">지금의 마음에 건네는 다섯 곡.<br>음악의 분위기를 담은 7장의 카드뉴스.</p><div class="cn-pages" aria-label="카드뉴스 미리보기 선택"><button type="button" data-card="1" aria-label="카드뉴스 1장 보기" aria-pressed="true">01</button><button type="button" data-card="2" aria-label="카드뉴스 2장 보기" aria-pressed="false">02</button><button type="button" data-card="3" aria-label="카드뉴스 3장 보기" aria-pressed="false">03</button><button type="button" data-card="4" aria-label="카드뉴스 4장 보기" aria-pressed="false">04</button><button type="button" data-card="5" aria-label="카드뉴스 5장 보기" aria-pressed="false">05</button><button type="button" data-card="6" aria-label="카드뉴스 6장 보기" aria-pressed="false">06</button><button type="button" data-card="7" aria-label="카드뉴스 7장 보기" aria-pressed="false">07</button></div><p id="cnCaption" aria-live="polite">01 / 07 — 표지</p><a class="cn-full-link" href="cardnews.html">프로젝트 자세히 보기 ↗</a><p class="cn-photo-credit">이 카드뉴스에 사용된 모든 이미지는 직접 촬영한 사진입니다.</p></div></div></div>
         </section>
 
-<section class="section cn-archive"><div class="cn-archive-inner"><div class="cn-archive-heading"><span>PROJECT ARCHIVE / CARD NEWS</span><span>HAN HEESUN</span></div><div class="cn-archive-layout"><a class="cn-preview" href="cardnews.html"><img id="cnPreview" src="images/cardnews/card-1.png" alt="청춘st 노래 모음zip 표지"><span>전체 카드뉴스 보기 ↗</span></a><div class="cn-archive-copy"><p>EDITORIAL DESIGN</p><h2>YOUTH<br>ON REPEAT</h2><h3>청춘st 노래 모음zip</h3><p class="cn-summary">지금의 마음에 건네는 다섯 곡.<br>음악의 분위기를 담은 7장의 카드뉴스.</p><div class="cn-pages" aria-label="카드뉴스 미리보기 선택"><button type="button" data-card="1" aria-label="카드뉴스 1장 보기" aria-pressed="true">01</button><button type="button" data-card="2" aria-label="카드뉴스 2장 보기" aria-pressed="false">02</button><button type="button" data-card="3" aria-label="카드뉴스 3장 보기" aria-pressed="false">03</button><button type="button" data-card="4" aria-label="카드뉴스 4장 보기" aria-pressed="false">04</button><button type="button" data-card="5" aria-label="카드뉴스 5장 보기" aria-pressed="false">05</button><button type="button" data-card="6" aria-label="카드뉴스 6장 보기" aria-pressed="false">06</button><button type="button" data-card="7" aria-label="카드뉴스 7장 보기" aria-pressed="false">07</button></div><p id="cnCaption" aria-live="polite">01 / 07 — 표지</p><a class="cn-full-link" href="cardnews.html">프로젝트 자세히 보기 ↗</a></div></div></div></section>
+        <section class="section five album-archive">
+            <div class="impulse-entry">
+                <a class="impulse-entry-art" href="impulse.html" aria-label="IMPULSE 카세트 앨범 기획안 보기"><img src="images/impulse-components.png" alt="IMPULSE 카세트 앨범 구성품"><span>VIEW PROJECT ↗</span></a>
+                <div class="impulse-entry-copy"><p class="impulse-entry-kicker">ALBUM PACKAGE / 01</p><h2>IMPULSE</h2><h3>CASSETTE TAPE EDITION</h3><p>디지털 앨범을 아날로그 카세트 패키지로 재해석한<br>개인 콘셉트 프로젝트입니다.</p><p class="impulse-entry-meta">Art Direction · Graphic Design · Package Design</p><a href="impulse.html">프로젝트 기획안 보기 ↗</a></div>
+            </div>
+        </section>
         <!-- 6번째 섹션 -->
         <section class="section six">
 
-            <div class="wall">
-                <p class="pj">Project Archive</p>
+            <div class="wall project-archive-wall">
+                <p class="pj">PROJECT ARCHIVE</p>
             </div>
 
             <div class="xa-switch" aria-label="프로젝트 선택"><button type="button" data-project="xband" aria-pressed="true">01 / X-BAND</button><button type="button" data-project="honey" aria-pressed="false">02 / 밀향 스틱꿀</button></div>
@@ -291,8 +269,8 @@
 
                 <div class="dp">
 
-                    <div class="screen">
-                        <img src="images/자연과양봉_상세페이지.png" alt="밀향 스틱꿀 상세페이지">
+                    <div class="screen" tabindex="0" role="region" aria-label="밀향 상세페이지, 안에서 스크롤하여 보기">
+                        <img src="images/honey-detail-heesun.png" alt="밀향 스틱꿀 상세페이지">
                     </div>
 
                     <img src="images/phone.png" alt="휴대폰 목업" class="frame">
@@ -335,7 +313,7 @@
                         제품의 특징과 구매 포인트를 효과적으로 전달했습니다.
                     </p>
 
-                    <a href="자연과양봉_상세페이지.pdf" target="_blank" class="pdf-btn">
+                    <a href="자연과양봉_상세페이지 한희선.pdf" target="_blank" class="pdf-btn">
                         VIEW PDF ↗
                     </a>
 
@@ -354,16 +332,15 @@
                         <iframe id="mainVideo" src="https://www.youtube.com/embed/bBtL84IYyoA" referrerpolicy="strict-origin-when-cross-origin" title="X-BAND 응원봉 광고 티저" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div></div>
                     <div class="video-info">
-                        <span class="category">VIDEO PROJECT</span><h2 id="videoTitle">X-BAND / 광고 티저</h2>
+                        <span class="category">VIDEO PROJECT</span><h2 id="videoTitle">X-BAND / 광고 티저</h2>
                         <p class="tool" id="videoTool">응원봉 리디자인 · Advertising Teaser</p><p id="videop">손목에서 시작되는 새로운 응원의 신호.</p><a class="xa-video-link" href="xband.html#film">X-BAND 기획안과 상세페이지 보기 ↗</a><a class="xa-video-link" href="https://youtu.be/bBtL84IYyoA" target="_blank" rel="noopener">YouTube에서 티저 보기 ↗</a>
                     </div>
                 </div>
                 <div class="video-list">
-                    <div class="video-item active" role="button" tabindex="0" data-video="https://www.youtube.com/embed/bBtL84IYyoA" data-title="X-BAND / 광고 티저" data-tool="응원봉 리디자인 · Advertising Teaser" data-desc="손목에서 시작되는 새로운 응원의 신호."><img src="https://i.ytimg.com/vi/bBtL84IYyoA/hqdefault.jpg" alt="X-BAND 광고 티저"><span>X-BAND / 광고 티저</span></div>
-                    <div class="video-item" role="button" tabindex="0" data-video="https://www.youtube.com/embed/X9EnyRUBmFs" data-title="PLAYLIST" data-tool="PLAYLIST VIDEO" data-desc="직접 제작한 플레이리스트 영상입니다."><img src="https://i.ytimg.com/vi/X9EnyRUBmFs/hqdefault.jpg" alt="PLAYLIST" loading="lazy"><span>PLAYLIST</span></div>
-                    <div class="video-item" role="button" tabindex="0" data-video="https://www.youtube.com/embed/qImDwBh0MFA" data-title="라이브 방송 편집" data-tool="LIVE VIDEO EDITING" data-desc="라이브 방송 편집 작업물입니다."><img src="https://i.ytimg.com/vi/qImDwBh0MFA/hqdefault.jpg" alt="라이브 방송 편집 영상" loading="lazy"><span>라이브 방송 편집</span></div>
-                    <div class="video-item" data-video="https://www.youtube.com/embed/XTbYKHR--H4" data-title="Brand Film" data-tool="Premiere Pro · Blender" data-desc="브랜드 필름 작업이 들어갈 자리입니다."><img src="https://i.ytimg.com/vi/XTbYKHR--H4/hqdefault.jpg" alt="Brand Film"><span>Brand Film</span></div>
-                    <div class="video-item" data-video="https://www.youtube.com/embed/XTbYKHR--H4" data-title="Short Form" data-tool="Premiere Pro" data-desc="숏폼 콘텐츠 작업이 들어갈 자리입니다."><img src="https://i.ytimg.com/vi/XTbYKHR--H4/hqdefault.jpg" alt="Short Form"><span>Short Form</span></div>
+                    <div class="video-item active" role="button" tabindex="0" data-video="https://www.youtube.com/embed/bBtL84IYyoA" data-title="X-BAND / 광고 티저" data-tool="Blender · After Effects · Premiere Pro · AI" data-desc="손목에서 시작되는 새로운 응원의 신호."><img src="https://i.ytimg.com/vi/bBtL84IYyoA/hqdefault.jpg" alt="X-BAND 광고 티저"><span>X-BAND / 광고 티저</span></div>
+                    <div class="video-item" role="button" tabindex="0" data-video="https://www.youtube.com/embed/X9EnyRUBmFs" data-title="PLAYLIST" data-tool="Photoshop · Premiere Pro" data-desc="직접 제작한 플레이리스트 영상입니다."><img src="https://i.ytimg.com/vi/X9EnyRUBmFs/hqdefault.jpg" alt="PLAYLIST" loading="lazy"><span>PLAYLIST</span></div>
+                    <div class="video-item" role="button" tabindex="0" data-video="https://www.youtube.com/embed/qImDwBh0MFA" data-title="라이브 방송 편집" data-tool="Illustrator · Photoshop · After Effects · Premiere Pro" data-desc="라이브 방송 편집 작업물입니다."><img src="https://i.ytimg.com/vi/qImDwBh0MFA/hqdefault.jpg" alt="라이브 방송 편집 영상" loading="lazy"><span>라이브 방송 편집</span></div>
+                    <div class="video-item" data-video="https://www.youtube.com/shorts/igFnDTV1Lus" data-title="MOVING POSTER" data-tool="Photoshop · After Effects · Premiere Pro · AI" data-desc="앨범 프로모션 무빙포스터 제작물입니다."><img src="https://i.ytimg.com/vi/igFnDTV1Lus/hqdefault.jpg" alt="MOVING POSTER"><span>MOVING POSTER</span></div>
                 </div>
             </div>
         </section>
