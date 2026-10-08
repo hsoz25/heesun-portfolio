@@ -27,7 +27,8 @@
 .lumiclea-feature .lumiclea-video iframe {
   display: block;
   width: 100%;
-  height: min(46vh, 460px);
+  aspect-ratio: 16 / 9;
+  height: auto;
   border: 0;
 }
 .lumiclea-feature .lumiclea-video > a {
@@ -46,14 +47,7 @@ body.contact-active>header { display: none !important; }
   #pf>.section.six>.project-archive-wall { position: static; width: 100%; height: auto; margin: 0 0 24px; }
   #pf>.section.six>.project-archive-wall .pj { position: static; transform: none; margin: 0; font-size: 28px; line-height: 1.2; white-space: normal; }
   .section.honey-slide .archive-wrap { gap: 32px; }
-  .lumiclea-feature .lumiclea-video iframe { height: min(52vh, 440px); }
   .lumiclea-feature .xa-copy h2 { font-size: clamp(40px, 6vw, 64px); }
-}
-@media (max-width: 800px) {
-  .lumiclea-feature .lumiclea-video iframe {
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
 }
 @media (max-width: 600px) {
   .second .contents-wrap { width: 100%; }
