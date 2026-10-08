@@ -15,6 +15,8 @@ $(function () {
             'page7',
             'page8',
             'page9',
+            'page10',
+            'page11',
             'footer'
         ],
 
@@ -28,10 +30,7 @@ $(function () {
         afterResponsive: function (isResponsive) {
 
             if (isResponsive) {
-                $(".second").hide();
                 $("header").addClass("on");
-            } else {
-                $(".second").show();
             }
 
         },
@@ -41,10 +40,11 @@ $(function () {
             console.log('현재 번호는 ' + index);
 
             $('header').toggleClass('machine-page', index === 3);
+            $('body').toggleClass('contact-active', anchorLink === 'page11' || anchorLink === 'footer');
 
             if (
                 index >= 3 &&
-                anchorLink !== 'page9' &&
+                anchorLink !== 'page11' &&
                 anchorLink !== 'footer'
             ) {
                 $('header').addClass('on');
@@ -60,6 +60,24 @@ $(function () {
 
         }
     });
+
+    // Keep the final contact page clear on narrow screens, where fullpage
+    // switches to normal scrolling and afterLoad may not run for each section.
+    const contactSection = document.querySelector('#pf > .end');
+    const footerSection = document.querySelector('#pf > .footer-section');
+    if (contactSection && footerSection && 'IntersectionObserver' in window) {
+        const updateFinalHeader = function () {
+            if (window.innerWidth > 1024) return;
+            const contactTop = contactSection.getBoundingClientRect().top;
+            const footerBottom = footerSection.getBoundingClientRect().bottom;
+            document.body.classList.toggle('contact-active', contactTop <= 90 && footerBottom > 0);
+        };
+        const observer = new IntersectionObserver(updateFinalHeader, { threshold: [0, .1, .5] });
+        observer.observe(contactSection);
+        observer.observe(footerSection);
+        window.addEventListener('resize', updateFinalHeader);
+        updateFinalHeader();
+    }
 
 
     /* ===========================
